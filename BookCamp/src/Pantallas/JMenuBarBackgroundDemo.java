@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.ImageIcon;
 
 public class JMenuBarBackgroundDemo extends JFrame {
 
@@ -30,6 +31,10 @@ public class JMenuBarBackgroundDemo extends JFrame {
 	private JButton btnNewButton_2;
 	private JLabel label;
 	private JTable table;
+	private Component verticalGlue;
+	private Component verticalGlue_1;
+	private Component verticalGlue_2;
+	private Component verticalGlue_3;
 
 	
 	/**
@@ -89,17 +94,42 @@ public class JMenuBarBackgroundDemo extends JFrame {
 		getContentPane().add(scrollPane_1, BorderLayout.CENTER);
 		
 		panel = new JPanel();
+		panel.setBackground(Color.LIGHT_GRAY);
 		getContentPane().add(panel, BorderLayout.WEST);
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		
-		btnNewButton_1 = new JButton("New button");
+		verticalGlue = Box.createVerticalGlue();
+		panel.add(verticalGlue);
+		
+		btnNewButton_1 = new JButton("");
+		btnNewButton_1.setBackground(Color.WHITE);
+		btnNewButton_1.setMargin(new Insets(0, 0, 0, 0));
+		btnNewButton_1.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Add.png")));
+		btnNewButton_1.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton_1);
 		
-		btnNewButton_2 = new JButton("New button");
+		verticalGlue_1 = Box.createVerticalGlue();
+		panel.add(verticalGlue_1);
+		
+		btnNewButton_2 = new JButton("");
+		btnNewButton_2.setBackground(Color.WHITE);
+		btnNewButton_2.setMargin(new Insets(0, 0, 0, 0));
+		btnNewButton_2.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Delete.png")));
+		btnNewButton_2.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton_2);
 		
-		btnNewButton = new JButton("New button");
+		verticalGlue_2 = Box.createVerticalGlue();
+		panel.add(verticalGlue_2);
+		
+		btnNewButton = new JButton("");
+		btnNewButton.setBackground(Color.WHITE);
+		btnNewButton.setMargin(new Insets(0, 0, 0, 0));
+		btnNewButton.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Search.png")));
+		btnNewButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton);
+		
+		verticalGlue_3 = Box.createVerticalGlue();
+		panel.add(verticalGlue_3);
 		
 		label = new JLabel("");
 		panel.add(label);
