@@ -7,34 +7,32 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.Box;
 import javax.swing.JTable;
 import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class JMenuBarBackgroundDemo extends JFrame {
+public class PantallaPrincipal extends JFrame {
 
 	private JMenu mnFile;
 	private JMenuItem mntmNew;
 	private JMenuItem mntmSave;
 	private JMenuBar menuBar;
 	private JMenu mnName;
-	private JScrollPane scrollPane;
 	private JPanel panel;
 	private JScrollPane scrollPane_1;
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
-	private JLabel label;
 	private JTable table;
 	private Component verticalGlue;
 	private Component verticalGlue_1;
 	private Component verticalGlue_2;
 	private Component verticalGlue_3;
+	
 
 	
 	/**
@@ -46,7 +44,7 @@ public class JMenuBarBackgroundDemo extends JFrame {
 			@Override
 			public void run() {
 				try {
-					JMenuBarBackgroundDemo frame = new JMenuBarBackgroundDemo();
+					PantallaPrincipal frame = new PantallaPrincipal();
 					frame.setVisible(true);
 
 				} catch (Exception e) {
@@ -59,7 +57,8 @@ public class JMenuBarBackgroundDemo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JMenuBarBackgroundDemo() {
+	public PantallaPrincipal() {
+		setTitle("Biblioteca");
 		//super("Background Image JMenuBar");
 		setResizable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -102,9 +101,14 @@ public class JMenuBarBackgroundDemo extends JFrame {
 		panel.add(verticalGlue);
 		
 		btnNewButton_1 = new JButton("");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.setMargin(new Insets(0, 0, 0, 0));
-		btnNewButton_1.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Add.png")));
+		btnNewButton_1.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Imagenes/Add.png")));
 		btnNewButton_1.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton_1);
 		
@@ -114,7 +118,7 @@ public class JMenuBarBackgroundDemo extends JFrame {
 		btnNewButton_2 = new JButton("");
 		btnNewButton_2.setBackground(Color.WHITE);
 		btnNewButton_2.setMargin(new Insets(0, 0, 0, 0));
-		btnNewButton_2.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Delete.png")));
+		btnNewButton_2.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Imagenes/Delete.png")));
 		btnNewButton_2.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton_2);
 		
@@ -124,15 +128,12 @@ public class JMenuBarBackgroundDemo extends JFrame {
 		btnNewButton = new JButton("");
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setMargin(new Insets(0, 0, 0, 0));
-		btnNewButton.setIcon(new ImageIcon(JMenuBarBackgroundDemo.class.getResource("/Imagenes/Search.png")));
+		btnNewButton.setIcon(new ImageIcon(PantallaPrincipal.class.getResource("/Imagenes/Search.png")));
 		btnNewButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(btnNewButton);
 		
 		verticalGlue_3 = Box.createVerticalGlue();
 		panel.add(verticalGlue_3);
-		
-		label = new JLabel("");
-		panel.add(label);
 		
 	}
 	
