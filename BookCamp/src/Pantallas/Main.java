@@ -5,7 +5,7 @@ public class Main {
 		
 	BookStore books = new BookStore("archivo.bin", "Librosl.csv");
 	//books.loadCSVFile();
-	books.addBook(new Book(1500, "Prueba", 1, 2, 2000, 3));
+	books.addBook(new Book(1010, "Carlos", 1, 2, 2000, 3));
 	//System.out.println(books.readBookById(1).toString());
 	
 //	System.out.println(books.addBook(new Book(1000, "el senor de los anillos", 1,2,3,4)));
