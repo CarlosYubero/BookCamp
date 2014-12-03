@@ -111,4 +111,9 @@ public class Book implements Serializable {
 		this.stock = stock;
 	}
 
+	public void addBook(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
