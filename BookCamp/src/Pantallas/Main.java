@@ -14,9 +14,9 @@ public class Main {
 	//books.printBiblio();
 	//System.out.println(books.readBookById(1).toString());
 	//books.getbooksbyAuthor(1);
-	System.out.println(books.existsBookById(1500));
-	System.out.println(books.readBookById(1500).toString());
-	System.out.println(books.existsBookById(1200));
+	//System.out.println(books.existsBookById(1500));
+	//System.out.println(books.readBookById(1500).toString());
+	//System.out.println(books.existsBookById(1200));
 	}
 
 }

@@ -33,21 +33,6 @@ public class PantallaAdd extends JFrame{
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				try {
-//					PantallaAdd window = new PantallaAdd();
-//					window.frmAddirLibro.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
 	/**
 	 * Create the application.
 	 */
@@ -83,7 +68,6 @@ public class PantallaAdd extends JFrame{
 		
 		textField_tittle = new JTextField();
 		textField_tittle.setColumns(10);
-//		textField_tittle.getText();
 		
 		txtAuthor = new JTextField();
 		txtAuthor.setText("Author");
@@ -93,8 +77,6 @@ public class PantallaAdd extends JFrame{
 		
 		textField_author = new JTextField();
 		textField_author.setColumns(10);
-//		String aut = textField_author.getText();
-//		int author = Integer.parseInt(aut);
 		
 		txtPublisher = new JTextField();
 		txtPublisher.setText("Publisher");
@@ -104,8 +86,6 @@ public class PantallaAdd extends JFrame{
 		
 		textField_publisher = new JTextField();
 		textField_publisher.setColumns(10);
-//		String publi = textField_publisher.getText();
-//		int publisher = Integer.parseInt(publi);
 		
 		txtYear = new JTextField();
 		txtYear.setText("Year");
@@ -115,8 +95,6 @@ public class PantallaAdd extends JFrame{
 		
 		textField_year = new JTextField();
 		textField_year.setColumns(10);
-//		String sYear = textField_year.getText();
-//		int year = Integer.parseInt(sYear);
 		
 		txtStock = new JTextField();
 		txtStock.setText("Stock");
@@ -126,8 +104,6 @@ public class PantallaAdd extends JFrame{
 		
 		textField_stock = new JTextField();
 		textField_stock.setColumns(10);
-//		String sStock = textField_stock.getText();
-//		int stock = Integer.parseInt(sStock);
 		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
@@ -199,7 +175,7 @@ public class PantallaAdd extends JFrame{
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				BookStore books = new BookStore("archivo.bin", "Librosl.csv");
+				//BookStore books = new BookStore("archivo.bin", "Librosl.csv");
 				
 				String sId = textField_id.getText();
 				int id = Integer.parseInt(sId);
@@ -218,7 +194,7 @@ public class PantallaAdd extends JFrame{
 				String sStock = textField_stock.getText();
 				int stock = Integer.parseInt(sStock);
 				
-				books.addBook(new Book(id, txtTittle.getText(), author, publisher, year, stock));
+				books = new Book(id, txtTittle.getText(), author, publisher, year, stock);
 				
 				setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
