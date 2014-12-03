@@ -17,6 +17,10 @@ import java.awt.event.ActionEvent;
 
 public class PantallaPrincipal extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2631738607245542435L;
 	private JMenu mnFile;
 	private JMenuItem mntmNew;
 	private JMenuItem mntmSave;
@@ -32,6 +36,7 @@ public class PantallaPrincipal extends JFrame {
 	private Component verticalGlue_1;
 	private Component verticalGlue_2;
 	private Component verticalGlue_3;
+	private PantallaAdd add;
 	
 
 	
@@ -103,6 +108,8 @@ public class PantallaPrincipal extends JFrame {
 		btnNewButton_1 = new JButton("");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				PantallaAdd add = new PantallaAdd();
+				
 				
 			}
 		});
